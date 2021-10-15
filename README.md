@@ -26,6 +26,7 @@ Primero el servidor web Django
 $ cd ezcreditos
 $ python ezcreditos/manage.py makemigrations
 $ python ezcreditos/manage.py migrate
+$ cd ..
 $ psql -U lilab lilab < creditos.sql
 $ python ezcreditos/manage.py runserver
 ```
