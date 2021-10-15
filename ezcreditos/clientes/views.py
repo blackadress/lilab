@@ -32,7 +32,7 @@ class DetallesCliente(generics.RetrieveUpdateDestroyAPIView):
 
 class ListarCreditos(generics.ListCreateAPIView):
     # permission_classes = [IsAuthenticated]
-    queryset = Solicitud_credito.objects.all()
+    queryset = Solicitud_credito.objects.filter(monto__lte=5000000, evaluado=False)
     serializer_class = CreditoSerializer
 
 

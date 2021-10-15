@@ -41,7 +41,10 @@ DJANGO_APPS = (
     "django.contrib.staticfiles",
 )
 
-THIRD_PARTY_APPS = ("rest_framework",)
+THIRD_PARTY_APPS = (
+    "rest_framework",
+    "corsheaders",
+)
 
 LOCAL_APPS = ("ezcreditos", "clientes")
 
@@ -50,11 +53,16 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    ## cors
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
+]
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
 ]
 
 ROOT_URLCONF = "ezcreditos.urls"
