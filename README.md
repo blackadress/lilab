@@ -21,7 +21,9 @@ $ pipenv install
 
 ## Correr aplicación
 ```shell
-$ python ezecreditos/manage.py makemigrations
-$ python ezecreditos/manage.py migrate
-$ python ezecreditos/manage.py runserver
+$ python ezcreditos/manage.py makemigrations
+$ python ezcreditos/manage.py migrate
+$ python ezcreditos/manage.py runserver
+$ python ezcreditos/manage.py createsuperuser --user admin --email ''
 ```
+Se asume que la contraseña del usuario admin es 'admin'
