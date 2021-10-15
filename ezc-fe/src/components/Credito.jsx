@@ -21,7 +21,8 @@ const Credito = ({ credito }) => {
       }),
     })
       .then(res => res.json())
-      .then(console.log);
+      // solucion hacky en lugar de hacerlo en el parent
+      .then(_ => window.location.reload());
   };
 
   const handleRechazar = () => {
@@ -43,7 +44,8 @@ const Credito = ({ credito }) => {
       }),
     })
       .then(res => res.json())
-      .then(console.log);
+      // solucion hacky en lugar de hacerlo en el parent
+      .then(_ => window.location.reload());
   };
   return (
     <div className="card">
